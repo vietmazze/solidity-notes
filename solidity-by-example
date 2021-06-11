@@ -1,0 +1,7 @@
+Array: Deleting element creates a gap in the array, replace the last elem into the index of delete and pop the last one.
+
+function delete (uint index) public 
+{
+arr[index] = arr[arr.length-1]
+arr.pop()
+}
