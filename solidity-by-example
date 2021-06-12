@@ -1,7 +1,21 @@
-Array: Deleting element creates a gap in the array, replace the last elem into the index of delete and pop the last one.
+Array: 
+1) Deleting element creates a gap in the array, replace the last elem into the index of delete and pop the last one.
 
-function delete (uint index) public 
-{
-arr[index] = arr[arr.length-1]
-arr.pop()
-}
+    function delete (uint index) public 
+    {
+    arr[index] = arr[arr.length-1]
+    arr.pop()
+    }
+
+Data Locations:
+1) storage- variable is a state variable
+    Todos storage todo = todos[index]
+2) memory - variable is in memory and it exists while a function is being called
+    function g(uint memory _arr) public returns (uint memory) 
+3) calldata - special data location that contains function arguments, only avail for external functions
+    function h(uint calldata _arr) external
+    
+
+Function input/output:
+1) cannot use mapping for input/output in function
+2) cannot use multidimensional array/
