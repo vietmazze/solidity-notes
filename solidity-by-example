@@ -27,7 +27,7 @@ View and Pure Functions:
 
 Function Modifier:
 1) They are use before/after a function call to do:
-    a) restrict access to specific msg.sender
+    a) restrict write access to specific msg.sender of the contract
     b) validate inputs b4 running another function
     c) guard against the reentrancy hack (where 2 contracts call each other recursively?)
   
