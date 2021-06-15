@@ -23,3 +23,11 @@ Function input/output:
 View and Pure Functions:
 1) View function declares that no state will be changed
 2) Pure function declares that no state variable will be changed or read.
+
+
+Function Modifier:
+1) They are use before/after a function call to do:
+    a) restrict access to specific msg.sender
+    b) validate inputs b4 running another function
+    c) guard against the reentrancy hack (where 2 contracts call each other recursively?)
+  
