@@ -50,4 +50,13 @@ Contract to Contract
     contract B is A
     contract C is A,B
    We will run into error because B is based on A, and A is most based first.
-    
+   
+Sending Ether:
+3 ways to send ETHER from contract to contract:
+1) Transfer: this method forwards 2300gas, but will throw error if tx fail for cases such as (not enough gas),(nonpayable contract)
+    a. Good to guard against re-entrancy hack but 2300gas limit is issue
+2) Send: this method forwards 2300 gas, and returns bool.
+    a. 2300 gas limit
+3) Call: forwards set amount/max gas, and returns bool.
+    a. Good for future tx since we can limit/set gas amount.
+    b. Becareful of re-entrancy hack using this method.
