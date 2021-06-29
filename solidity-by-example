@@ -60,3 +60,7 @@ Sending Ether:
 3) Call: forwards set amount/max gas, and returns bool.
     a. Good for future tx since we can limit/set gas amount.
     b. Becareful of re-entrancy hack using this method.
+Receiving Ether:
+-When receiving ETHER, either fallback() or receive() must exist within the contract.
+1) Receive() is called if msg.data is empty
+2) fallback() is called if msg.data is not empty
