@@ -60,7 +60,20 @@ Sending Ether:
 3) Call: forwards set amount/max gas, and returns bool.
     a. Good for future tx since we can limit/set gas amount.
     b. Becareful of re-entrancy hack using this method.
+
 Receiving Ether:
 -When receiving ETHER, either fallback() or receive() must exist within the contract.
 1) Receive() is called if msg.data is empty
 2) fallback() is called if msg.data is not empty
+
+Keccak256 Hash Function:
+- In order to create a hash in Solidity, we use keccak256
+1) The parameter for keccak can be anything such as string _text, uint _num, address _addr
+    bytes32 hash = keccak256(abi.encodePacked(_text,_num,_addr));
+2) Collision Resistant - keccak256 is collision resistant BUT abi.encodePacked can mess up on dynamic variables
+    bytes32 hash = keccak256(abi.encodePacked(_text1,_text2));
+    This will run into issue if 
+    text1 = AA
+    text2 = BB
+    encodePacked will combine before hashing.
+    The best way to avoid is use abi.encode
