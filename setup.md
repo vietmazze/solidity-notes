@@ -1,35 +1,28 @@
-1)Create your REACT APP frontend:
-- npx create-react-app react-token-faucet
+Frontend setup:
+a) npx create-react-app [name]
 
-2)Install hardhat,ethers,chai
-- npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
-
-3)Install openzeppelin contracts if needed
-- npm install @openzeppelin/contracts
-
-4)Initialize hardhat project
-- npx hardhat run
-
-These files should be present:
-hardhat.config.js - project configuration
-.gitignore - github should not push
-/scripts/sample-script.js - our deployer script
-/test/sample-test.js - tests
-
-Add a .env if needed
-- touch .env
-
-5) Configure .gitignore to remove production env, add to .gitignore
-# misc
-.env
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+b) cd into react app and install: 
+ 
+ npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
+ 
+ 1) @nomiclabs/hardhat-waffle: This is a Hardhat plugin that enables waffle support.
+ 2) @nomiclabs/hardhat-ethers: This is a Hardhat plugin that enables ethers support.
+ 3) ethereum-waffle: Waffle is a Solidity testing library. It allows you to write tests for your contracts with JavaScript.
+ 4) chai: Chai is an assertion library and provides functions like expect.
+ 5) ethers: This is a popular Ethereum client library. It allows you to interface with blockchains that implement the Ethereum API.
+ 6) solidity-coverage: This library gives you coverage reports on unit tests with the help of Istanbul.
 
 
+c)setup hardhat by typing
+  
+  npx hardhat
+- choose sample project
+- 
+d) the folder will now contain [scripts],[test],[contracs] and hardhat.config.js
+
+e) activate plugins such as waffle, chai by entering into hardhat.config.js:
+ -require("@nomiclabs/hardhat-waffle")
+f) make sure you're using the network you'd want and paths to artifacts
 
 
-
-
+    
