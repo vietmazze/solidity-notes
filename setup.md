@@ -29,5 +29,11 @@ f) make sure you're using the network you'd want and paths to artifacts
 
 g) after this setup, we can start working on our contract
 
+Full Command list:
+````
+npx create-react-app [name]
+npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
+npx hardhat
+````
 ** See compile and deploy for further steps.
 
