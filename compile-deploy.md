@@ -63,7 +63,7 @@
     ````
     -The command uses Hardhat to execute your script and defines the target network as localhost.
     
-    Complete Command list:
+    Complete Command list: npx or yarn is needed before each.
     ````
     hardhat compile
     hardhat node
