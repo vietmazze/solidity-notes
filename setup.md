@@ -29,8 +29,5 @@ f) make sure you're using the network you'd want and paths to artifacts
 
 g) after this setup, we can start working on our contract
 
-h) COMPILING your contract:
-   npx hardhat compile 
- - this will create the artifacts in the src directory
- - artifacts/contracts/Greeter.json file contains ABI and can be use to intereact with EVM
+** See compile and deploy for further steps.
 
