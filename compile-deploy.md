@@ -9,16 +9,17 @@
   - Waffle and chai are used for verify contracts.
   - Using the describe/it structure through Mocha JS test.
   
-  'const {expect} = require("chai");
-  describe("MyContract", () => {
-  it("should return its name", async () => {
+  ````javascript
+    const {expect} = require("chai");
+    describe("MyContract", () => {
+    it("should return its name", async () => {
     const MyContract = await ethers.getContractFactory("MyContract");
     const myContract = await MyContract.deploy("My Contract");
 
     await myContract.deployed();
     expect(await myContract.getName()).to.equal("My Contract");
   });
-  '
+ ````
   
   - describe: logical block of the test
   - it: tell us the name of the testing block for us to recognize later
