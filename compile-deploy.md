@@ -1,5 +1,6 @@
 **1) COMPILE**
   To compile your contracts use: 
+    
     - hardhat compile
 
   Once compile, the artifacts folder will be created.
@@ -55,7 +56,7 @@
     - Before running deploy script, we need to deploy a test network (hardhat comes with local testnet)
       - hardhat node
     - This should connect to hardhat testnet and create bunch of addresses.
-    - Then to run the script use - or create a script in package.json
+    - Then to run the script use
     
     ````
       "hardhat run --network localhost scripts/deployMyContract.js"
