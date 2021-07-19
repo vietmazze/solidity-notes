@@ -16,6 +16,8 @@ b) cd into react app and install:
 c)setup hardhat by typing
   
   npx hardhat
+
+  npm install --save-dev hardhat
 - choose sample project
 
 
