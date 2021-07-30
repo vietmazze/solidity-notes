@@ -60,3 +60,10 @@ npx truffle compile
       ````
           npx truffle migrate --network development
       ````
+5) Connecting to public networks:
+      a)
+      ````
+      npm install --save-dev @truffle/hdwallet-provider
+      ````
+      b) setup account and api with Alchemy
+      c) setup truffle-config.js to connect to test network such as rinkeby.
