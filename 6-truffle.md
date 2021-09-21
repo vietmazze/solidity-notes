@@ -70,4 +70,13 @@ npx truffle compile
       b) setup account and api with Alchemy
       c) setup truffle-config.js to connect to test network such as rinkeby.
       
+ 
+ Additional Commands
+````
+truffle init
+truffle compile
+truffle test
+truffle debug
+truffle migrate
+````
 
