@@ -7,7 +7,25 @@
     arr.pop()
     }
 
-Data Locations:
+
+````
+function <function name>(<parameters>)
+    [internal | external | public | private]
+    [pure | constant | view | payable]
+    [modifiers]
+    [return(<return types>)]
+    {
+        <body>
+    }
+````
+
+**Accessiblity: **
+1. Public - no restrictions
+2. External - only from outside the contract (unless you use this)
+3. Private - only from this contract
+4. Internal - only from this contract and all derived contracts
+
+**Data Locations:**
 1) storage- variable is a state variable
     Todos storage todo = todos[index]
 2) memory - variable is in memory and it exists while a function is being called
@@ -15,7 +33,6 @@ Data Locations:
 3) calldata - special data location that contains function arguments, only avail for external functions
     function h(uint calldata _arr) external
     
-
 **Function input/output:**
 1) cannot use mapping for input/output in function
 2) cannot use multidimensional array/
@@ -24,6 +41,10 @@ Data Locations:
 1) View function declares that no state will be changed
 2) Pure function declares that no state variable will be changed or read.
 
+**Throwing Exceptions:**
+1) assert() - Test internal errors and check for invariants
+2) require(condition) - Ensure valid conditions/state, validate return values
+3) revert() - always throw an exception
 
 **Function Modifier:**
 1) They are use before/after a function call to do:
