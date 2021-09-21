@@ -32,6 +32,9 @@ npx truffle compile
 
         #create the local blockchain
         npx ganache-cli --deterministic
+        
+        #or use command by truffle
+        npx truffle develop
       ````
       b) deploy requires a script inside migration/2_deploy.js
       ````javascript
