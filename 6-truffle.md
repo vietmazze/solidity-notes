@@ -60,6 +60,8 @@ npx truffle compile
       ````
           npx truffle migrate --network development
       ````
+      * To re-running the migration command after new functions added, use --reset
+            ````truffle migrate --network development --reset   ````
 5) Connecting to public networks:
       a)
       ````
@@ -67,3 +69,5 @@ npx truffle compile
       ````
       b) setup account and api with Alchemy
       c) setup truffle-config.js to connect to test network such as rinkeby.
+      
+
