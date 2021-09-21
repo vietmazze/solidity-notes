@@ -26,12 +26,27 @@ function <function name>(<parameters>)
 4. Internal - only from this contract and all derived contracts
 
 **Data Locations:**
-1) storage- variable is a state variable
+1) storage- State variables are always in storage
+    Local variables of struct, array or mapping type reference storage by default
     Todos storage todo = todos[index]
-2) memory - variable is in memory and it exists while a function is being called
+2) memory - Function arguments are always in memory, function call
     function g(uint memory _arr) public returns (uint memory) 
-3) calldata - special data location that contains function arguments, only avail for external functions
+3) calldata stack -(local variable) special data location that contains function arguments, only avail for external functions
+    Local variables of value type (i.e. neither array, nor struct nor mapping) are stored in the stack
     function h(uint calldata _arr) external
+    Bugs arrive because devs don't know how to store data
+Notes on the usage of memory:
+There are defaults for the storage location depending on which type of variable it concerns:
+
+- State variables are always in storage
+
+- Function arguments are always in memory
+
+- Local variables of struct, array or mapping type reference storage by default
+
+- Local variables of value type (i.e. neither array, nor struct nor mapping) are stored in the stack
+
+
     
 **Function input/output:**
 1) cannot use mapping for input/output in function
