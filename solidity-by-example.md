@@ -70,17 +70,23 @@ There are defaults for the storage location depending on which type of variable 
 **Inheritance:** 
 Within a contract:
 1) Virtual: A parent function that is going to be overriden by child, must declare virtual
+    ````
     function foo() public virtual returns (string memory) {}
+    ````
 2) Override: Contract that override a parent function must contain override
 Contract to Contract
 3) All contract inheritance of another must use "is" to inherit another
+    ````
     contract A {}
     contract B is A {}
+    ````
 4) Contracts order of inheritance is important, and it is from RIGHT to LEFT order but most-based like first.
+    ````
     contract A
     contract B
     C will inherit functions in B before A since B is first come
     contract C is A,B {}
+    ````
 5) If you have:
     contract A
     contract B is A
