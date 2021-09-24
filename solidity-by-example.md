@@ -88,9 +88,10 @@ Contract to Contract
     contract C is A,B {}
     ````
 5) If you have:
-    contract A
+    ````contract A
     contract B is A
     contract C is A,B
+    ````
    We will run into error because B is based on A, and A is most based first.
    
 **Sending Ether:**
