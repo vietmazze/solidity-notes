@@ -57,9 +57,26 @@ There are defaults for the storage location depending on which type of variable 
 2) Pure function declares that no state variable will be changed or read.
 
 **Throwing Exceptions:**
-1) assert() - Test internal errors and check for invariants
-2) require(condition) - Ensure valid conditions/state, validate return values
-3) revert() - always throw an exception
+
+1) require(condition) - Ensure valid conditions/state, validate return values
+   ```` 
+    Validation of inputs, external call returns and variables before state changes
+    Refunds remaining gas when fail
+    Should be used more often and towards the beginning of functions
+    ````
+2)assert() - Test internal errors and check for invariants
+    
+    ````
+    Validation of invariants, situations that should never happen and variables after state changes
+    Consumes all gas when fail
+    Should be used less often and towards the end of functions
+    ````
+3)revert() - always throw an exception
+    ````
+        Reverts the current transaction
+        Refunds remaining gas when fail
+        Used within if-else statements
+    ````
 
 **Function Modifier:**
 1) They are use before/after a function call to do:
