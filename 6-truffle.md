@@ -12,7 +12,7 @@ git commit -m "message"
 git push -u main
 
 #install truffle
-npm install --save-dev truffle
+npm install --save-dev truffle web3 @truffle/hdwallet-provider
 
 #init config truffle
 npx truffle init
