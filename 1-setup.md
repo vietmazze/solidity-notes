@@ -28,10 +28,8 @@ npm tailwindcss init -p
 c)setup hardhat by typing
   
   npx hardhat
-
-  npm install --save-dev hardhat
 - choose sample project
-
+- setup your hardhat.config by adding network/ solidity version..
 
 d) the folder will now contain [scripts],[test],[contracs] and hardhat.config.js
 
